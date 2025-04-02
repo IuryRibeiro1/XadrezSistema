@@ -44,7 +44,6 @@ public class Rook extends ChessPiece {
         if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
 
-
         }
 //      Verificar se tem peças a esquerda
         p.setValues(position.getRow(), position.getColumn() + 1);
@@ -56,7 +55,6 @@ public class Rook extends ChessPiece {
         if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
 
-
         }
 
         //Verificar se tem peças abaixo da torre
@@ -66,13 +64,15 @@ public class Rook extends ChessPiece {
             mat[p.getRow()][p.getColumn()] = true;
             p.setRow(p.getRow() + 1);
         }
-        if (getBoard().positionExists(p) && isThereOpponentPiece(p))
+        if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
-
-        return mat;
 
         }
 
+        return mat;
+
     }
+
+}
 
 
