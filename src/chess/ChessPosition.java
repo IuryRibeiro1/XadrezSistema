@@ -28,7 +28,7 @@ public class ChessPosition {
     }
 
     protected static ChessPosition fromPosition(Position position){
-        return new ChessPosition((char) ((int)'a' - position.getColumn()), 8 - position.getRow() );
+        return new ChessPosition((char) ((int)'a' + position.getColumn()), 8 - position.getRow() );
     }
 
 //  A string vazia é para forçar o compilador entender que é uma concatenação de strings
